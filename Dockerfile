@@ -9,6 +9,6 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN npm install --production
 
-CMD NODE_TLS_REJECT_UNAUTHORIZED=0 node server
+CMD NODE_ENV=production NODE_TLS_REJECT_UNAUTHORIZED=0 node server
 
 EXPOSE 80
